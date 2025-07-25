@@ -1,0 +1,17 @@
+First use CFV-Dataset folder which contains Car Orientation dataset:
+1. Orientation_wise_distribution.py seperats the available image into the required Orientation categories.
+2. detection_crop_0.9.py runs yolo object detection to detect car objects and save high conifidence detected 
+   images in each category folder (output folder).
+3. The image dataset obtained after above step will be used to train an object Orientation classifier.
+4. classifier model is available in Orientation folder.
+5. use image_to_video.py to convert original images from CFV-Dataset to videos (saved in videos folder)
+
+Now in main folder (XAI_Guided_Diffusion) Place all the videos created above to input_videos folder.
+1. run simple_car_detection.py to run detections in video, It will create a database of original image and 
+   its corresponding salency map in classified_cars_output folder.
+2. run visual_RAG_and_combined_mask.py to create a RAG storage to retrive top salency map (GRADCAMPLUS) matches
+   (to create combined mask) also to retreive corresponding original images to create reference blend.
+3. run rag_diffusion_enhance.py, takes input video & applies object detection on it. If confidence comes
+   in given range, it uses RAG to create combined importance Mask from salency maps and blends it with top 
+   matching (top 3) original image and feeds it to diffusion model (along with prompt) to generate guided 
+   perturbations. If perturbated images gives better conf it will be saved else original will be kept.
