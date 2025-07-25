@@ -25,7 +25,7 @@ A structured reference database is constructed using the CFV image dataset. This
 - These maps highlight the most critical regions that influenced the model’s prediction.
 
 <p align="center">
-  <img src="images/fig1.png" alt="Fig. 1. Saliency & Orientation Database Creation" width="400"/>
+  <img src="images/fig1.jpg" alt="Fig. 1. Saliency & Orientation Database Creation" width="400"/>
   <br>
   Fig. 1. Saliency & Orientation Database Creation
 </p>
@@ -45,13 +45,13 @@ When a low-confidence detection occurs:
 5. The enhanced ROI is then re-evaluated to check for confidence score improvement.
 
 <p align="center">
-  <img src="images/fig2.png" alt="Fig. 2. Vector Database Generation & Retrieval" height="300" width="600"/>
+  <img src="images/fig2.jpg" alt="Fig. 2. Vector Database Generation & Retrieval" height="300" width="600"/>
   <br>
   Fig. 2. Vector Database Generation & Retrieval
 </p>
 
 <p align="center">
-  <img src="images/fig3.png" alt="Fig. 3. RAG-Guided Diffusion Inpainting for Confidence Enhancement" height="300"  width="600"/>
+  <img src="images/fig3.jpg" alt="Fig. 3. RAG-Guided Diffusion Inpainting for Confidence Enhancement" height="300"  width="600"/>
   <br>
   Fig. 3. RAG-Guided Diffusion Inpainting for Confidence Enhancement
 </p>
